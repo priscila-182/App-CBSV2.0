@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LibrosActivity"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout"
+    android:orientation="vertical">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navegation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:theme="@style/navigationTheme"
+        android:background="#A8A7A7"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/menu_header"
+        app:menu="@menu/main_menu"/>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/menu_icono"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/oswald_light"
+                android:text="Registro de Libros"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="850dp">
+
+                    <EditText
+                        android:id="@+id/txtTitulo"
+                        android:layout_width="227dp"
+                        android:layout_height="61dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="135dp"
+                        android:layout_marginTop="231dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="558dp"
+                        android:backgroundTint="@color/black"
+                        android:ems="20"
+                        android:hint="Ingrese titulo"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/txtAutor"
+                        android:layout_width="227dp"
+                        android:layout_height="56dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="137dp"
+                        android:layout_marginTop="311dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="483dp"
+                        android:backgroundTint="@color/black"
+                        android:ems="20"
+                        android:hint="Ingrese autor"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tvTres"
+                        android:layout_width="118dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="321dp"
+                        android:layout_marginEnd="239dp"
+                        android:layout_marginBottom="485dp"
+                        android:text="Autor:"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/txtGenero"
+                        android:layout_width="229dp"
+                        android:layout_height="59dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="136dp"
+                        android:layout_marginTop="396dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="395dp"
+                        android:backgroundTint="@color/black"
+                        android:ems="20"
+                        android:hint="Ingrese género"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/txtNumeroPaginas"
+                        android:layout_width="224dp"
+                        android:layout_height="54dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="138dp"
+                        android:layout_marginTop="489dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="307dp"
+                        android:backgroundTint="@color/black"
+                        android:ems="20"
+                        android:hint="Ingrese n° de páginas"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/txtDescripcion"
+                        android:layout_width="219dp"
+                        android:layout_height="275dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="139dp"
+                        android:layout_marginTop="580dp"
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginBottom="38dp"
+                        android:background="#F6F3F3"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="Ingrese Descripción"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/black"
+                        android:textColorHint="#BAB9B9"
+                        android:textSize="20dp"
+                        tools:ignore="TextContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/tvSeis"
+                        android:layout_width="120dp"
+                        android:layout_height="42dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="580dp"
+                        android:layout_marginEnd="242dp"
+                        android:layout_marginBottom="228dp"
+                        android:text="Descripción:"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/tvCinco"
+                        android:layout_width="115dp"
+                        android:layout_height="41dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="502dp"
+                        android:layout_marginEnd="243dp"
+                        android:layout_marginBottom="307dp"
+                        android:text="Páginas:"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/tvCuatro"
+                        android:layout_width="118dp"
+                        android:layout_height="41dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="408dp"
+                        android:layout_marginEnd="242dp"
+                        android:layout_marginBottom="401dp"
+                        android:text="Género:"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/tvDos"
+                        android:layout_width="115dp"
+                        android:layout_height="52dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="241dp"
+                        android:layout_marginEnd="243dp"
+                        android:layout_marginBottom="557dp"
+                        android:text="Titulo:"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:id="@+id/selectImage"
+                        android:layout_width="99dp"
+                        android:layout_height="186dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="262dp"
+                        android:layout_marginBottom="651dp"
+                        app:srcCompat="@drawable/agregarportada" />
+
+                    <Button
+                        android:id="@+id/btnIngresarPortada"
+                        android:layout_width="189dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="163dp"
+                        android:layout_marginTop="84dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="701dp"
+                        android:backgroundTint="#B2DFDB"
+                        android:onClick="onclick"
+                        android:text="Agregar Portada"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnGuardarLibro"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:text="Guardar Libro"
+                    android:backgroundTint="#B2DFDB"/>
+
+                <Button
+                    android:id="@+id/btnVerLibros"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:text="Ver Libros"
+                    android:backgroundTint="#DCEDC8"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

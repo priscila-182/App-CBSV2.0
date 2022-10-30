@@ -2,6 +2,7 @@ package com.example.app_cbsv20;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -12,6 +13,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.app_cbsv20.databinding.ActivityMapsBinding;
 
+import java.security.Permission;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -21,6 +24,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -29,6 +33,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
+
 
     /**
      * Manipulates the map once available.
@@ -44,8 +49,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng santiago = new LatLng(-33.4377756, -70.6504502);
+        mMap.addMarker(new MarkerOptions().position(santiago).title("Santiago"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(santiago));
     }
 }
